@@ -1,0 +1,42 @@
+@use "mixins" as *;
+.answerWrapper {
+  @include popupBackground;
+  .container {
+    @include popupContent;
+    .heading {
+      background-color: #2c5282;
+      border-radius: 10px 10px 0 0;
+      padding: 20px;
+      h2 {
+        color: white;
+        margin-bottom: 15px;
+      }
+    }
+    .content {
+      padding: 20px;
+      color: #797878;
+      .details {
+        gap: 3rem;
+        margin: 10px 0;
+      }
+      fieldset {
+        border: none;
+        margin: 5px 0;
+        @include fieldsetStyle;
+      }
+      .ctas {
+        button {
+          padding: 10px 20px;
+          border: none;
+          border-radius: 8px;
+          margin-right: 10px;
+          cursor: pointer;
+          &:nth-child(2) {
+            background-color: #2c5282;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}

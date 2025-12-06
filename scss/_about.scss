@@ -1,0 +1,37 @@
+.about {
+  max-width: 700px;
+  margin: 0 auto;
+  .card {
+    border-left: 3px solid #d69e2e;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 20px;
+    h3 {
+      color: #2c5282;
+      font-size: 1.59rem;
+    }
+    .list {
+      .item {
+        .circle {
+          width: 5px;
+          height: 5px;
+          background-color: #2c5282;
+          border-radius: 50px;
+          margin-top: 5px;
+        }
+        p {
+          line-height: 1;
+        }
+      }
+    }
+  }
+  .contact-us {
+    background-color: #ccc;
+    padding: 15px;
+    gap: 7px;
+    h2 {
+      color: #2c5282;
+    }
+  }
+}

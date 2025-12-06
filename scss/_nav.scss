@@ -1,0 +1,39 @@
+nav {
+  position: relative;
+  margin-bottom: 3rem;
+  .hero {
+    width: 100%;
+    min-height: 45vh;
+  }
+  .nav-content {
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    right: 0;
+    color: white;
+    .images {
+      max-width: 100px;
+      img {
+        width: 100%;
+      }
+    }
+    p {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+    .btns {
+      .btn {
+        background-color: rgba(255, 255, 255, 0.288);
+        border: 2px solid white;
+        padding: 10px 20px;
+        text-decoration: none;
+        color: white;
+        &.active {
+          background-color: #2c5282;
+          color: white;
+          border: none;
+        }
+      }
+    }
+  }
+}

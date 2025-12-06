@@ -1,0 +1,130 @@
+@use "mixins" as *;
+
+.admin-page {
+  background-color: #ceddf3e1;
+  padding-bottom: 20px;
+  nav {
+    background: linear-gradient(to right, #2c5282, rgb(248, 68, 248));
+    padding: 20px;
+    .item {
+      gap: 6px;
+      img {
+        max-width: 50px;
+      }
+      h1 {
+        color: white;
+      }
+    }
+    button {
+      padding: 10px 30px;
+      border: none;
+      background-color: #ffffffa4;
+      border: 2px solid white;
+      border-radius: 10px;
+    }
+  }
+  .stats {
+    width: 90%;
+    margin: 0 auto;
+    .stat-card {
+      background-color: white;
+      width: 100%;
+      padding: 1.5rem;
+      p {
+        font-size: 2.3rem;
+      }
+      span {
+        color: #a8a7a7;
+      }
+      &:nth-child(1) {
+        border-left: 4px solid #2c5282;
+        p {
+          color: #2c5282;
+        }
+      }
+      &:nth-child(2) {
+        border-left: 4px solid #d69e2e;
+        p {
+          color: #d69e2e;
+        }
+      }
+      &:nth-child(3) {
+        border-left: 4px solid #38a169;
+        p {
+          color: #38a169;
+        }
+      }
+    }
+  }
+
+  .action-section {
+    background-color: white;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    padding: 20px;
+    border-radius: 20px;
+    .input-section {
+      @include inputField;
+    }
+    select {
+      padding: 9px;
+      border-radius: 9px;
+      border: none;
+      background-color: transparent;
+      border: 2px solid #bebdbd;
+      font-size: 14px;
+    }
+  }
+  .question-wrapper {
+    background-color: white;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    .card {
+      padding: 14px;
+      border-bottom: 1px solid #ccc;
+      margin-top: 10px;
+
+      &:last-child {
+        border-bottom: none;
+      }
+      .question-content {
+        .sub-section {
+          margin: 6px 0;
+          p {
+            color: #868585;
+            font-size: 14px;
+            font-weight: 500;
+            strong {
+              color: #817f7f;
+            }
+          }
+        }
+      }
+
+      .answer-section {
+        border-left: 4px solid #38a169;
+        background-color: rgba(229, 250, 229, 0.89);
+        padding: 6px;
+        h3 {
+          color: #38a169;
+        }
+        .answer {
+          font-size: 15px;
+          margin-top: 5px;
+        }
+        .answer-footer {
+          p {
+            color: #868585;
+            font-size: 14px;
+            font-weight: 500;
+            strong {
+              color: #817f7f;
+            }
+          }
+        }
+      }
+    }
+  }
+}

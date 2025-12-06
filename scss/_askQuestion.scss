@@ -1,0 +1,63 @@
+@use "mixins" as *;
+.question-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  h1 {
+    color: #2c5282;
+  }
+  p {
+    color: #bbb8b8;
+    font-size: 17px;
+  }
+  form {
+    width: 100%;
+    max-width: 700px;
+    fieldset {
+      border: none;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 20px;
+      input {
+        padding: 15px;
+        font-size: 17px;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        margin-top: 5px;
+      }
+      textarea {
+        resize: vertical;
+        font-size: 14px;
+        min-height: 30vh;
+        @extend input;
+      }
+    }
+
+    select {
+      @include selectStyle;
+    }
+    .checkbox-section {
+      span {
+        color: #979797;
+      }
+    }
+    .form-btns {
+      margin-top: 2rem;
+      button {
+        padding: 15px 25px;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        &:nth-child(1) {
+          background-color: #38a169;
+          color: white;
+        }
+        &:nth-child(2) {
+          border: 2px solid #ccc;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}

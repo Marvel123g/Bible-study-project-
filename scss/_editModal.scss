@@ -1,0 +1,54 @@
+@use "mixins" as *;
+
+.edit-Wrapper {
+  @include popupBackground;
+  .edit-content {
+    @include popupContent;
+    .header {
+      background-color: #2c5282;
+      border-radius: 10px 10px 0 0;
+      padding: 20px;
+      h2 {
+        color: white;
+        margin-bottom: 15px;
+      }
+    }
+
+    .fields {
+      padding: 20px;
+      //   color: #797878;
+      fieldset {
+        border: none;
+        margin: 5px 0;
+        @include fieldsetStyle;
+        input {
+          margin-bottom: 8px;
+          &:first-child {
+            margin-top: 0;
+          }
+        }
+        select {
+          @include selectStyle;
+          padding: 10px;
+          border-radius: 5px;
+          border: 1px solid #ccc;
+        }
+      }
+    }
+    .cta-btns {
+      justify-content: flex-end;
+      margin-top: 20px;
+      button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        margin-right: 10px;
+        cursor: pointer;
+        &:nth-child(2) {
+          background-color: #2c5282;
+          color: white;
+        }
+      }
+    }
+  }
+}

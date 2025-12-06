@@ -1,0 +1,62 @@
+.home {
+  background-color: white;
+  min-height: 100vh;
+  // color: white;
+  position: relative;
+  .container {
+    .adminBtn {
+      position: absolute;
+      top: 1rem;
+      right: 20px;
+      padding: 15px 40px;
+      border-radius: 10px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      background-color: #2c5282;
+      color: white;
+    }
+    .drop-down {
+      animation: drop 2s ease-out;
+      animation-fill-mode: forwards;
+      transform: translateY(-600px);
+      opacity: 0;
+      h1 {
+        font-size: 3rem;
+        // color: white;
+        text-align: center;
+      }
+      button {
+        background-color: #2c5282;
+        padding: 15px 40px;
+        border-radius: 10px;
+        font-size: 1.1rem;
+        border: none;
+        margin-top: 10px;
+        animation: pulse 2s infinite;
+        cursor: pointer;
+        color: white;
+      }
+    }
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+@keyframes drop {
+  from {
+    transform: translateY(-600px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}

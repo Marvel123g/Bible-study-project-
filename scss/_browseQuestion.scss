@@ -1,0 +1,26 @@
+@use "mixins" as *;
+.browse-question-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  h2 {
+    color: #2c5282;
+    font-size: 1.9rem;
+    margin-bottom: 20px;
+  }
+  .fields {
+    .input-field {
+      @include inputField;
+    }
+    select {
+      padding: 9px;
+      border-radius: 9px;
+      border: none;
+      background-color: transparent;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+  }
+  .question-grid {
+    @include gridStyle;
+  }
+}

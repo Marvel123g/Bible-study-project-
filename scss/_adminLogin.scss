@@ -1,0 +1,49 @@
+.admin-login {
+  background-color: #2c5282;
+  min-height: 100vh;
+  .container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    .container-content {
+      h2 {
+        color: #2c5282;
+      }
+      p {
+        font-size: 15px;
+        color: #406ea5;
+        margin-top: 6px;
+      }
+      fieldset {
+        border: none;
+        width: 100%;
+        margin-bottom: 30px;
+        label {
+          margin-bottom: 5px;
+          color: #2c5282;
+          font-size: 18px;
+        }
+        input {
+          padding: 10px;
+          border-radius: 7px;
+          border: 1px solid #ccc;
+        }
+        .errorMssg {
+          color: red;
+          font-size: 15px;
+        }
+      }
+      button {
+        width: 100%;
+        background: linear-gradient(to right, #2c5282, #9140a5);
+        border: none;
+        border-radius: 10px;
+        padding: 10px;
+        font-size: 15px;
+        color: white;
+        margin-bottom: 20px;
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.viewWrapper {
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  .container {
+    background-color: white;
+    max-width: 400px;
+    width: 100%;
+    min-height: 30vh;
+    padding: 20px;
+    position: relative;
+    section {
+      margin: 10px 0;
+    }
+    .answer {
+      margin-bottom: 30px;
+      .answer-details {
+        margin-top: 10px;
+      }
+    }
+    button {
+      display: flex;
+      justify-content: flex-end;
+      position: absolute;
+      right: 9px;
+      bottom: 5px;
+      padding: 9px 26px;
+      border: none;
+      background-color: #2c5282;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  }
+}
