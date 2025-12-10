@@ -9,8 +9,8 @@ export default function EditModal({
   refreshTrigger,
 }) {
   const [title, setTitle] = useState(question ? question.question : "");
-  const [details, setDetails] = useState(
-    question ? question.questionDetails : ""
+  const [answerDetails, setAnswerDetails] = useState(
+    question ? question.answer : ""
   );
   const [questionCategory, setQuestionCategory] = useState(
     question ? question.category : ""
@@ -20,7 +20,7 @@ export default function EditModal({
     try {
       await updateDoc(doc(db, "questions", question.id), {
         question: title,
-        questionDetails: details,
+        answer: answerDetails,
         category: questionCategory,
       });
     } catch (error) {
@@ -48,11 +48,11 @@ export default function EditModal({
             />
           </fieldset>
           <fieldset>
-            <label htmlFor="details">Question Details</label>
+            <label htmlFor="details">Answer</label>
             <textarea
               type="text"
-              value={details}
-              onChange={(e) => setDetails(e.target.value)}
+              value={answerDetails}
+              onChange={(e) => setAnswerDetails(e.target.value)}
             />
           </fieldset>
 

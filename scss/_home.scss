@@ -1,8 +1,11 @@
 .home {
   background-color: white;
-  min-height: 100vh;
   // color: white;
+  height: 100vh;
   position: relative;
+  background-image: url("../public/images/hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   .container {
     .adminBtn {
       position: absolute;
@@ -10,6 +13,7 @@
       right: 20px;
       padding: 15px 40px;
       border-radius: 10px;
+      color: white;
       font-weight: bold;
       border: none;
       cursor: pointer;
@@ -23,8 +27,9 @@
       opacity: 0;
       h1 {
         font-size: 3rem;
-        // color: white;
+        color: white;
         text-align: center;
+        text-shadow: 2px 4px 5px black;
       }
       button {
         background-color: #2c5282;

@@ -3,7 +3,7 @@ nav {
   margin-bottom: 3rem;
   .hero {
     width: 100%;
-    min-height: 45vh;
+    min-height: 60vh;
   }
   .nav-content {
     position: absolute;
@@ -33,6 +33,18 @@ nav {
           color: white;
           border: none;
         }
+      }
+    }
+    @media (max-width: 552px) {
+      top: 1rem;
+      h1 {
+        font-size: 1.6rem;
+      }
+      p {
+        font-size: 17px;
+      }
+      .btns {
+        flex-direction: column;
       }
     }
   }

@@ -8,13 +8,37 @@ export default function page() {
       <div className="about d-flex flex-column">
         <h2 className="text-center">About Our Q&A Platform</h2>
         <div className="card">
-          <h3>Our Mission</h3>
-          <p>
-            This Q&A platform is designed to create a safe and supportive
-            environment where members of our church community can ask questions
-            about faith, doctrine, and Christian living. We believe that asking
-            questions is an important part of spiritual growth.
-          </p>
+          <h3>Our Vision</h3>
+
+          <ul>
+            <li>
+              To Teacg the Accurate word of God with utterance by the spirit and
+              for the glorification of the Lord.
+            </li>
+            <li>
+              To make/build men in power of the word and arm them by the
+              strength of the Holy Spirit, the guidelines for destiny fulfilment
+              in Christ
+            </li>
+            <li>
+              To raise a Gideon Army - (vision 300) a unique quality of men who
+              live with the consciousness that their strength lies with God and
+              in God
+            </li>
+            <li>
+              To raise believers who are aware of their rights and privileges in
+              Christ.
+            </li>
+            <li>
+              To teach the doctrines of faith and the creative abilities of
+              God's word as the ultimate testament of the gospel
+            </li>
+            <li>
+              To raise unit members who are rooted in the word and can
+              communicate the life thereof and be role models both academically
+              and spiritually with the help of the holy spirit.
+            </li>
+          </ul>
         </div>
         <div className="card">
           <h3>How it Works</h3>
