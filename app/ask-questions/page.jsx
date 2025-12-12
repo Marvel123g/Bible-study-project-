@@ -49,8 +49,8 @@ export default function page() {
     <>
       <NavBar />
       <div className="question-page d-flex flex-column align-center">
-        <h1>Ask Your Question</h1>
-        <p>
+        <h1 className="text-center">Ask Your Question</h1>
+        <p className="text-center">
           We're to help you grow your faith. No question is too small or too
           big.
         </p>

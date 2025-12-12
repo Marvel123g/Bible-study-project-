@@ -9,36 +9,53 @@ export default function page() {
         <h2 className="text-center">About Our Q&A Platform</h2>
         <div className="card">
           <h3>Our Vision</h3>
-
-          <ul>
-            <li>
-              To Teacg the Accurate word of God with utterance by the spirit and
-              for the glorification of the Lord.
-            </li>
-            <li>
-              To make/build men in power of the word and arm them by the
-              strength of the Holy Spirit, the guidelines for destiny fulfilment
-              in Christ
-            </li>
-            <li>
-              To raise a Gideon Army - (vision 300) a unique quality of men who
-              live with the consciousness that their strength lies with God and
-              in God
-            </li>
-            <li>
-              To raise believers who are aware of their rights and privileges in
-              Christ.
-            </li>
-            <li>
-              To teach the doctrines of faith and the creative abilities of
-              God's word as the ultimate testament of the gospel
-            </li>
-            <li>
-              To raise unit members who are rooted in the word and can
-              communicate the life thereof and be role models both academically
-              and spiritually with the help of the holy spirit.
-            </li>
-          </ul>
+          <div className="list">
+            <div className="item d-flex gap-1 mt-1">
+              <div className="circle"></div>
+              <p>
+                To Teach the Accurate word of God with utterance by the spirit
+                and for the glorification of the Lord.
+              </p>
+            </div>
+            <div className="item d-flex gap-1 mt-1">
+              <div className="circle"></div>
+              <p>
+                To make/build men in power of the word and arm them by the
+                strength of the Holy Spirit, the guidelines for destiny
+                fulfilment in Christ
+              </p>
+            </div>
+            <div className="item d-flex gap-1 mt-1">
+              <div className="circle"></div>
+              <p>
+                To raise a Gideon Army - (vision 300) a unique quality of men
+                who live with the consciousness that their strength lies with
+                God and in God
+              </p>
+            </div>
+            <div className="item d-flex gap-1 mt-1">
+              <div className="circle"></div>
+              <p>
+                To raise believers who are aware of their rights and privileges
+                in Christ.
+              </p>
+            </div>
+            <div className="item d-flex gap-1 mt-1">
+              <div className="circle"></div>
+              <p>
+                To teach the doctrines of faith and the creative abilities of
+                God's word as the ultimate testament of the gospel
+              </p>
+            </div>
+            <div className="item d-flex gap-1 mt-1">
+              <div className="circle"></div>
+              <p>
+                To raise unit members who are rooted in the word and can
+                communicate the life thereof and be role models both
+                academically and spiritually with the help of the holy spirit.
+              </p>
+            </div>
+          </div>
         </div>
         <div className="card">
           <h3>How it Works</h3>
