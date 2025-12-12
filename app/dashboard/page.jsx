@@ -90,7 +90,9 @@ export default function Home() {
             <Link className="text-decoration-none" href="/ask-questions">
               <button className="rounded-1">Ask Questions</button>
             </Link>
-            <button className="rounded-1">Browse Questions</button>
+            <Link className="text-decoration-none" href="/browse-questions">
+              <button className="rounded-1">Browse Questions</button>
+            </Link>
           </div>
         </div>
 
