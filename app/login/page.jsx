@@ -5,6 +5,7 @@ import React, { useState } from "react";
 export default function page() {
   const [password, setPassword] = useState("");
   const [errorMssg, setErrorMssg] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   const router = useRouter();
   const handleLogin = async () => {
@@ -17,9 +18,13 @@ export default function page() {
       setErrorMssg("Invalid password");
       return;
     } else {
+      setErrorMssg("");
+      setShowPassword(false);
       router.push("/adminDashboard");
-      setPassword("");
     }
+  };
+  const toggleShowPassword = () => {
+    setShowPassword((prev) => !prev);
   };
 
   return (
@@ -32,12 +37,17 @@ export default function page() {
 
           <fieldset className="d-flex flex-column mt-1">
             <label htmlFor="admin-passowrd">Admin Password</label>
-            <input
-              type="password"
-              placeholder="Enter admin password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
+            <div className="field d-flex align-center">
+              <input
+                type={showPassword ? "text" : "password"}
+                placeholder="Enter admin password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <div className="btn" onClick={toggleShowPassword}>
+                {showPassword ? "👁️" : "🙈"}
+              </div>
+            </div>
             {errorMssg && <p className="errorMssg">{errorMssg}</p>}
           </fieldset>
           <button onClick={handleLogin}>Login to Admin Panel</button>

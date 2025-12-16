@@ -117,14 +117,14 @@ export default function page() {
         <div className="contact-us text-center mt-2 rounded d-flex flex-column">
           <h2>Contact Us</h2>
           <p>
-            If you have about this platform or need additional support, please
-            contact:
+            If you have questions about this platform or need additional
+            support, please contact us:
           </p>
           <span>
-            <strong>Email:</strong> questions@gracecommunitychurch.org
+            <strong>Pastor femi:</strong> +234 702 527 5473
           </span>
           <span>
-            <strong>Phone:</strong> (555) 123-4567
+            <strong>Pastor mauton:</strong> +234 708 516 5088
           </span>
         </div>
       </div>
