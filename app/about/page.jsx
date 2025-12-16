@@ -120,6 +120,7 @@ export default function page() {
             If you have questions about this platform or need additional
             support, please contact us:
           </p>
+          <b>Whatsapp</b>
           <span>
             <strong>Pastor femi:</strong> +234 702 527 5473
           </span>
