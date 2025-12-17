@@ -13,6 +13,10 @@ export default function page() {
   const [email, setEmail] = useState("");
   const [category, setCategory] = useState("");
   const [tick, setTick] = useState("");
+  const [questionError, setQuestionError] = useState("");
+  const [nameError, setNameError] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [categoryError, setCategoryError] = useState("");
 
   const clearForm = () => {
     setQuestion("");
@@ -26,23 +30,52 @@ export default function page() {
 
   const handlePostQuestions = async (e) => {
     e.preventDefault();
-
-    const today = new Date();
-    await addDoc(collection(db, "questions"), {
-      question,
-      questionDetails,
-      name: tick ? "Anonymous" : name,
-      email: tick ? "anonymous@gmail.com" : email,
-      category,
-      date: today.toLocaleDateString(),
-      status: "pending",
-      answer: "",
-      answeredBy: "",
-      answeredDate: "",
-      // timestamp: Date.now(),
-    });
-    clearForm();
-    route.push("/dashboard");
+    let isValid = true;
+    if (!question) {
+      setQuestionError("This field is required");
+      isValid = false;
+    } else {
+      setQuestionError("");
+    }
+    if (!name) {
+      setNameError("This field is required");
+      isValid = false;
+    } else {
+      setNameError("");
+    }
+    if (!email) {
+      setEmailError("This field is required");
+      isValid = false;
+    } else {
+      setEmailError("");
+    }
+    if (!category) {
+      setCategoryError("Please choose a category");
+      isValid = false;
+    } else {
+      setCategoryError("");
+    }
+    if (isValid) {
+      const today = new Date();
+      await addDoc(collection(db, "questions"), {
+        question,
+        questionDetails,
+        name: tick ? "Anonymous" : name,
+        email: tick ? "anonymous@gmail.com" : email,
+        category,
+        date: today.toLocaleDateString(),
+        status: "pending",
+        answer: "",
+        answeredBy: "",
+        answeredDate: "",
+        // timestamp: Date.now(),
+      });
+      console.log("great");
+      clearForm();
+      route.push("/dashboard");
+    } else {
+      console.log("not Great");
+    }
   };
 
   return (
@@ -64,6 +97,7 @@ export default function page() {
               value={question}
               onChange={(e) => setQuestion(e.target.value)}
             />
+            {questionError && <p className="errorMssg">{questionError}</p>}
           </fieldset>
           <fieldset>
             <label htmlFor="question-details">Question Details(Optional)</label>
@@ -84,6 +118,7 @@ export default function page() {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               />
+              {nameError && <p className="errorMssg">{nameError}</p>}
             </fieldset>
             <fieldset>
               <label htmlFor="your-email">Your Email</label>
@@ -94,6 +129,7 @@ export default function page() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
+              {emailError && <p className="errorMssg">{emailError}</p>}
             </fieldset>
           </section>
 
@@ -115,6 +151,8 @@ export default function page() {
               <option value="christian-living">Christian Living</option>
               <option value="others">Others</option>
             </select>
+
+            {categoryError && <p className="errorMssg">{categoryError}</p>}
           </div>
 
           <div className="checkbox-section d-flex gap-1 mt-1">
