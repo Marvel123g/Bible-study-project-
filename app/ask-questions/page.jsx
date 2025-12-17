@@ -93,7 +93,6 @@ export default function page() {
             <input
               type="text"
               placeholder="What would you like to know?"
-              required
               value={question}
               onChange={(e) => setQuestion(e.target.value)}
             />
@@ -114,7 +113,6 @@ export default function page() {
               <input
                 type="text"
                 placeholder="Your full name"
-                required
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               />
@@ -125,7 +123,6 @@ export default function page() {
               <input
                 type="text"
                 placeholder="your.email@example.com"
-                required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
@@ -136,7 +133,6 @@ export default function page() {
           <div className="category">
             <label htmlFor="category">Category</label>
             <select
-              required
               value={category}
               onChange={(e) => setCategory(e.target.value)}
             >
